@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MidiLib">
-      <HintPath>..\..\MidiLib\MidiLib\bin\Release\MidiLib.dll</HintPath>
+    <Reference Include="MidiLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\MidiLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -89,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Soundfonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\MidiLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
