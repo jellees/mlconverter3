@@ -42,18 +42,19 @@ namespace mlconverter3
             BinaryReader binaryReader = new BinaryReader(new FileStream(path, FileMode.Open));
             binaryReader.BaseStream.Position = 0xA0;
 
-            bool regconized = true;
+            bool recognized = true;
 
             switch (GameTitle = Encoding.ASCII.GetString(binaryReader.ReadBytes(0x10)))
             {
                 case Games.BKGR.Identifier: Game = new Games.BKGR(binaryReader); break;
                 case Games.BAPI.Identifier: Game = new Games.BAPI(binaryReader); break;
-                default: regconized = false; break;
+                case Games.ICAG.Identifier: Game = new Games.ICAG(binaryReader); break;
+                default: recognized = false; break;
             }
 
             binaryReader.Close();
 
-            if (regconized)
+            if (recognized)
             {
                 opened = true;
                 return true;
@@ -65,7 +66,7 @@ namespace mlconverter3
         {
             for (int i = 0; i < Game.Count; i++)
             {
-                ToMidi(path, i);
+                ToMidi(path + "\\"+ Game.GoodName + " - " + i.ToString("D3") + ".mid", i);
             }
         }
 

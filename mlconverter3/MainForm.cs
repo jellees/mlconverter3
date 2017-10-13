@@ -69,13 +69,13 @@ namespace mlconverter3
         }
 
         private void exportAllMidiBtn_Click(object sender, EventArgs e)
-        {/*
+        {
             FolderBrowserDialog folder = new FolderBrowserDialog();
             if (folder.ShowDialog() == DialogResult.OK)
             {
-                exportAllToMidi(folder.SelectedPath);
+                Rom.Instance.AllToMidi(folder.SelectedPath);
                 MessageBox.Show("MIDIs succesfully exported!");
-            }*/
+            }
         }
 
         private void sfEditBtn_Click(object sender, EventArgs e)
