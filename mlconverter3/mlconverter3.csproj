@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Games\AVTR.cs" />
     <Compile Include="Games\BAPI.cs" />
     <Compile Include="Games\BKGR.cs" />
     <Compile Include="Games\Game.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rom.cs" />
+    <Compile Include="Sequences\AVTRseq.cs" />
     <Compile Include="Sequences\BKGRseq.cs" />
     <Compile Include="Sequences\ICAGseq.cs" />
     <Compile Include="Sequences\Sequence.cs" />

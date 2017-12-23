@@ -49,6 +49,7 @@ namespace mlconverter3
                 case Games.BKGR.Identifier: Game = new Games.BKGR(binaryReader); break;
                 case Games.BAPI.Identifier: Game = new Games.BAPI(binaryReader); break;
                 case Games.ICAG.Identifier: Game = new Games.ICAG(binaryReader); break;
+                case Games.AVTR.Identifier: Game = new Games.AVTR(binaryReader); break;
                 default: recognized = false; break;
             }
 
